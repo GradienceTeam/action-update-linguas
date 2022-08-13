@@ -57,7 +57,7 @@ fi
 echo "🔨 Generating LINGUAS file"
 
 cd $PO_DIR
-for f in *.po; then
+for f in *.po; do
   echo "${f%%.*}\n" >> /temp/LINGUAS
 done
 
