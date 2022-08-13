@@ -1,0 +1,19 @@
+name: 'Update LINGUAS'
+description: 'Update LINGUAS file'
+author: 'AdwCustomizerTeam'
+inputs:
+  destination_path:
+    description: 'Destination path to save generated LINGUAS file'
+    required: false
+  po_dir:
+    description: 'Directory where to look for .po file'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.destination_path }}
+    - ${{ inputs.po_dir }}
+branding:
+  icon: book-open
+  color: red
