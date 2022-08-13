@@ -73,7 +73,7 @@ if [[ $(cat /tmp/LINGUAS) != $(cat "$DESTINATION_PATH/LINGUAS") ]]; then
   if [ "$(git status $POT_PATH --porcelain)" != "" ]; then
      echo "🔼 Pushing to repository"
      git add "$DESTINATION_PATH/LINGUAS"
-     git commit -m "🔄 Generated LINGUAS File"
+     git commit -m "ci: generate LINGUAS file"
      if [ "$FORK" == true ]; then
 	echo "debug: $REPO_NAME"
 	git config credential.https://github.com/.helper "! f() { echo username=x-access-token; echo password=$TOKEN; };f"
