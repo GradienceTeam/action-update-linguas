@@ -72,7 +72,7 @@ if [[ $(cat /tmp/LINGUAS) != $(cat "$DESTINATION_PATH/LINGUAS") ]]; then
   # Push file to repository.
   if [ "$(git status $POT_PATH --porcelain)" != "" ]; then
      echo "🔼 Pushing to repository"
-     git add "$POT_PATH"
+     git add "$DESTINATION_PATH/LINGUAS"
      git commit -m "🔄 Generated POT File"
      if [ "$FORK" == true ]; then
 	echo "debug: $REPO_NAME"
