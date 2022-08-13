@@ -4,9 +4,11 @@ author: 'AdwCustomizerTeam'
 inputs:
   destination_path:
     description: 'Destination path to save generated LINGUAS file'
+    default: "po"
     required: false
   po_dir:
     description: 'Directory where to look for .po file'
+    default: "po"
     required: false
 runs:
   using: 'docker'
