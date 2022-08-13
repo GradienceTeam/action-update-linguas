@@ -65,7 +65,7 @@ cd $GITHUB_WORKSPACE
 
 cat /tmp/LINGUAS
 
-if [[ $(cat /tmp/LINGUAS) != $(cat LINGUAS) ]]; then
+if [[ $(cat /tmp/LINGUAS) != $(cat "$DESTINATION_PATH/LINGUAS") ]]; then
   mv /tmp/LINGUAS "$DESTINATION_PATH/LINGUAS"
   
   
