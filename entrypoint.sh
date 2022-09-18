@@ -21,8 +21,8 @@ else
 fi
 
 # Setup Git config and push .pot file to github repo
-git config --global user.name $INPUT_AUTHOR
-git config --global user.email $INPUT_AUTHOR_EMAIL
+git config --global user.name "$INPUT_AUTHOR"
+git config --global user.email "$INPUT_AUTHOR_EMAIL"
 git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
 REPO_NAME="$GITHUB_REPOSITORY"
