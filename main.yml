@@ -10,6 +10,13 @@ inputs:
     description: 'Directory where to look for .po file'
     default: "po"
     required: false
+  author:
+    default: "github-actions[bot]"
+    required: false
+
+  author_email:
+    default: "41898282+github-actions[bot]@users.noreply.github.com"
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
